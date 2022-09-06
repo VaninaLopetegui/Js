@@ -1,45 +1,52 @@
-alert ("Pongamos a prueba tus decisiones al cruzar la calle 👀");
-
-let jugarSimulador = parseInt(prompt ("¿Jugamos?: 1.Si 2.No"));
-while (jugarSimulador===1){
-    alert ("Supongamos que estas en una situacion en la que llegas a una esquina🚶, debes cruzar la calle y ves la luz en rojo para peatones");
-    let preguntaCruzarCalle = parseInt(prompt ("¿Cruzas la calle o esperas a que este verde?: 1.Espero 2.Cruzo"));
-    if (preguntaCruzarCalle===1){
-        alert ("Muy bien! esperaste y ahora vas a cruzar la calle en semáforo verde para tí.")
-    } else if (preguntaCruzarCalle===2) {
-        alert ("☠Lamentamos informarte que cruzaste la calle y un auto te atropelló en el camino.☠");
+let serviciosContratados = 0
+alert ("Bienvenidos a la página web de servicios de nuestra veterinaria!✨🤩");
+let serviciosSeleccionados = parseInt (prompt ("¿Qué servicio podemos ofrecerte o en qué te podemos ayudar? 1.Quiero bañar a mi mascota 2.Quiero un corte de pelo para mi mascota 3.Quiero atender a mi mascota por sintomas de enfermedad 4.Quiero comprar un kit de juguetes para mi mascota"));
+let servicioContradadoSi = true
+let domicilio
+let volverAContratarServicios
+while (servicioContradadoSi===true) {
+    if(serviciosSeleccionados===1) {
+        serviciosContratados = serviciosContratados + 400;
+    } else if (serviciosSeleccionados===2) {
+        serviciosContratados = serviciosContratados + 500;
+    } else if (serviciosSeleccionados===3) {
+        serviciosContratados = serviciosContratados + 300;
+    } else if (serviciosSeleccionados===4){
+        serviciosContratados = serviciosContratados + 1000;
     } else {
-        alert ("No has ingresado ninguna opción válida, vuelve a intentarlo.");
-        preguntaCruzarCalle = parseInt(prompt ("¿Cruzas la calle o esperas a que este verde?: 1.Espero 2.Cruzo"));
-    }
-} if (jugarSimulador===2){
-    alert ("Disculpe las molestias, ¡gracias por su atención!");
-} else {
-    alert ("No has ingresado ninguna opción válida, vuelve a intentarlo.");
-    jugarSimulador = parseInt(prompt ("¿Jugamos?: 1.Si 2.No"));
-}
-
-if (preguntaCruzarCalle===1) {
-    let preguntaEsquivar = parseInt(prompt ("Oh no!😱 cuando estas cruzando, se te atraviesa una moto que no vió la luz en rojo para vehículos 🏍: 1.Esquivar 2.Me paralizo 3.Retrocedo")); 
-    if (preguntaEsquivar===1){
-    alert ("Eso estuvo muy cerca! buena decision! Sigue avanzando hacia tu destino.✔")
-    } else if (preguntaEsquivar===2){
-    alert ("No fue una decision muy correcta, ahora tendremos que ir a un médico urgente😵‍💫")
-    } else if (preguntaEsquivar===3){
-    alert ("Tomaste la mejor decisión!! Felicidades, ahora podrás seguir caminando hacia tu destino.💯✔")
-    } else {
-    alert ("No has escrito una opción correcta❗❗ Intenta escribiendo los números como respuesta.")
-    preguntaEsquivar = parseInt(prompt ("Oh no!😱 cuando estas cruzando, se te atraviesa una moto que no vió la luz en rojo para vehículos 🏍: 1-Esquivar 2-Me paralizo 3-Retrocedo"));
+        serviciosSeleccionados = parseInt (prompt ("Has ingresado un producto inexistente! escribe alguno de estos: 1.Quiero bañar a mi mascota 2.Quiero un corte de pelo para mi mascota 3.Quiero atender a mi mascota por sintomas de enfermedad 4.Quiero comprar un kit de juguetes para mi mascota"));
+        continue
     }
 }
-
-let jugarDeNuevo
-jugarDeNuevo = parseInt (prompt("Quieres volver a jugar para buscar un final diferente❓ 1.Si 2.No"))
-if (jugarDeNuevo===1){
-    jugarSimulador = parseInt(prompt ("¿Jugamos?: 1.Si 2.No"));
-} else if (jugarDeNuevo===2){
-    alert ("💟 Gracias por jugar con nosotros!! 💟")
+volverAContratarServicios = parseInt (prompt ("¿Quieres contratar algún otro servicio? 1.Si 2.No"));
+if(volverAContratarServicios===1){
+    serviciosSeleccionados = parseInt (prompt ("¿Qué servicio podemos ofrecerte o en qué te podemos ayudar? 1.Quiero bañar a mi mascota 2.Quiero un corte de pelo para mi mascota 3.Quiero atender a mi mascota por sintomas de enfermedad 4.Quiero comprar un kit de juguetes para mi mascota"));
+} else if (volverAContratarServicios===2) {
+    servicioContradadoSi = false;
 } else {
-    alert ("No escribiste una opcion existente, vuelve a escribirnos!")
-    jugarDeNuevo = parseInt (prompt("Quieres volver a jugar para buscar un final diferente❓ 1.Si 2.No"))
+    alert ("Lamentamos informarte que no has ingresado una opción correcta 😓");
+}
+alert ("El costo de los servicios contradados es "+serviciosContratados);
+let valorDomicilio
+const servicioADomicilio = (valor) => {
+    let impuestoPorIrADomicilio = 0
+    if (valor<=300){
+        impuestoPorIrADomicilio = 100
+    } else if (valor>300 && valor<=1000){
+        impuestoPorIrADomicilio = 90
+    } else if (valor>1000 && valor<=3000){
+        impuestoPorIrADomicilio = 0
+    }
+    valorDomicilio = valor + impuestoPorIrADomicilio
+    return valorDomicilio
+}
+let valorConImpuestoDomicilio = servicioADomicilio(serviciosContratados);
+alert ("El total para ir hasta el domicilio es de "+valorConImpuestoDomicilio)
+let ingreseDomicilio = parseInt (prompt ("¿Ingresas tu domicilio para poder ir a acesorarte? 1.Si 2.No"));
+if (ingreseDomicilio===1){
+    alert ("Muchísimas gracias! en los próximos 2 días irá un profesional por tu domicilio! Tu precio final será de "+valorConImpuestoDomicilio)
+} else if (ingreseDomicilio===2){
+    alert ("Perfecto! en este caso, puedes recurrir a la sucursal más cercana en las calles Av Wilson 10 en esquina 11, el costo total para abonar en sucursal sería de "+serviciosContratados)
+} else {
+    ingreseDomicilio = parseInt (prompt ("No entendimos tu respuesta, ¿Ingresas tu domicilio para poder ir a acesorarte? 1.Si 2.No"));
 }
