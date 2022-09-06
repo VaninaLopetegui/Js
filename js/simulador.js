@@ -5,6 +5,7 @@ let servicioContradadoSi = true
 let domicilio
 let volverAContratarServicios
 while (servicioContradadoSi===true) {
+    console.log("serviciosSeleccionados", serviciosSeleccionados);
     if(serviciosSeleccionados===1) {
         serviciosContratados = serviciosContratados + 400;
     } else if (serviciosSeleccionados===2) {
@@ -17,15 +18,17 @@ while (servicioContradadoSi===true) {
         serviciosSeleccionados = parseInt (prompt ("Has ingresado un producto inexistente! escribe alguno de estos: 1.Quiero bañar a mi mascota 2.Quiero un corte de pelo para mi mascota 3.Quiero atender a mi mascota por sintomas de enfermedad 4.Quiero comprar un kit de juguetes para mi mascota"));
         continue
     }
+    volverAContratarServicios = parseInt (prompt ("¿Quieres contratar algún otro servicio? 1.Si 2.No"));
+    if(volverAContratarServicios===1){
+        serviciosSeleccionados = parseInt (prompt ("¿Qué servicio podemos ofrecerte o en qué te podemos ayudar? 1.Quiero bañar a mi mascota 2.Quiero un corte de pelo para mi mascota 3.Quiero atender a mi mascota por sintomas de enfermedad 4.Quiero comprar un kit de juguetes para mi mascota"));
+    } else if (volverAContratarServicios===2) {
+        //servicioContradadoSi = false;
+        break;
+    } else {
+        alert ("Lamentamos informarte que no has ingresado una opción correcta 😓");
+    }
 }
-volverAContratarServicios = parseInt (prompt ("¿Quieres contratar algún otro servicio? 1.Si 2.No"));
-if(volverAContratarServicios===1){
-    serviciosSeleccionados = parseInt (prompt ("¿Qué servicio podemos ofrecerte o en qué te podemos ayudar? 1.Quiero bañar a mi mascota 2.Quiero un corte de pelo para mi mascota 3.Quiero atender a mi mascota por sintomas de enfermedad 4.Quiero comprar un kit de juguetes para mi mascota"));
-} else if (volverAContratarServicios===2) {
-    servicioContradadoSi = false;
-} else {
-    alert ("Lamentamos informarte que no has ingresado una opción correcta 😓");
-}
+
 alert ("El costo de los servicios contradados es "+serviciosContratados);
 let valorDomicilio
 const servicioADomicilio = (valor) => {
