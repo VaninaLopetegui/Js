@@ -22,7 +22,6 @@ while (servicioContradadoSi===true) {
     if(volverAContratarServicios===1){
         serviciosSeleccionados = parseInt (prompt ("¿Qué servicio podemos ofrecerte o en qué te podemos ayudar? 1.Quiero bañar a mi mascota 2.Quiero un corte de pelo para mi mascota 3.Quiero atender a mi mascota por sintomas de enfermedad 4.Quiero comprar un kit de juguetes para mi mascota"));
     } else if (volverAContratarServicios===2) {
-        //servicioContradadoSi = false;
         break;
     } else {
         alert ("Lamentamos informarte que no has ingresado una opción correcta 😓");
@@ -46,8 +45,10 @@ const servicioADomicilio = (valor) => {
 let valorConImpuestoDomicilio = servicioADomicilio(serviciosContratados);
 alert ("El total para ir hasta el domicilio es de "+valorConImpuestoDomicilio)
 let ingreseDomicilio = parseInt (prompt ("¿Ingresas tu domicilio para poder ir a acesorarte? 1.Si 2.No"));
+let domicilioUsuario
 if (ingreseDomicilio===1){
-    alert ("Muchísimas gracias! en los próximos 2 días irá un profesional por tu domicilio! Tu precio final será de "+valorConImpuestoDomicilio)
+    domicilioUsuario = prompt ("Ingresa aquí tu domicilio");
+    alert ("Muchísimas gracias! en los próximos 2 días irá un profesional por tu domicilio! Tu precio final será de "+valorConImpuestoDomicilio+"Cualquier consulta al 092222999")
 } else if (ingreseDomicilio===2){
     alert ("Perfecto! en este caso, puedes recurrir a la sucursal más cercana en las calles Av Wilson 10 en esquina 11, el costo total para abonar en sucursal sería de "+serviciosContratados)
 } else {
