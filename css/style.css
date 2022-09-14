@@ -1,3 +1,15 @@
 .h1Header {
     font-size: 1em;
 }
+#botonAyuda {
+    width: 10%;
+    height: 30%;
+    border-radius: 10%;
+}
+.boton {
+    height: 200px;
+}
+.tituloIndex {
+    height: 150px;
+    color: rgb(24, 124, 124);
+}
