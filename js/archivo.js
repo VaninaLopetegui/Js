@@ -63,3 +63,45 @@ function clickFuction() {
         ingreseDomicilio = parseInt (prompt ("No entendimos tu respuesta, ¿Ingresas tu domicilio para poder ir a acesorarte? 1.Si 2.No"));
     }
 }
+/*           objetos para compra de carrito con usuario             */
+let servicios = [];
+let carrito = [];
+
+const servicioBaño = {
+    id: 1,
+    servicio: "Baño",
+    precio: 500
+}
+servicios.push(servicioBaño)
+
+const servicioPeluqueria = {
+    id: 2,
+    servicio: "Peluqueria canina",
+    precio: 400
+}
+servicios.push(servicioPeluqueria)
+
+const servicioAtencionMedica = {
+    id: 3,
+    servicio: "Atencion medica",
+    precio: 300
+}
+servicios.push(servicioAtencionMedica)
+
+const servicioJuguetes = {
+    id: 4,
+    servicio: "Kit de juguetes",
+    precio: 1000
+}
+servicios.push(servicioJuguetes)
+
+const botonCarrito = document.getElementById("botonCarrito");
+
+botonCarrito.onclick = () => {
+console.log(selectTag.selectedIndex);
+}
+
+
+
+
+
