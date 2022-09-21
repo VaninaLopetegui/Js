@@ -65,41 +65,61 @@ function clickFuction() {
 }
 /*           objetos para compra de carrito con usuario             */
 let servicios = [];
+
+const cardCarrito1 = document.getElementById("cardCarrito1");
+const cardCarrito2 = document.getElementById("cardCarrito2");
+const cardCarrito3 = document.getElementById("cardCarrito3");
+
 let carrito = [];
 
 const servicioBaño = {
     id: 1,
     servicio: "Baño",
-    precio: 500
+    precio: 500,
 }
-servicios.push(servicioBaño)
+servicios.push(servicioBaño);
 
 const servicioPeluqueria = {
     id: 2,
     servicio: "Peluqueria canina",
-    precio: 400
+    precio: 400,
 }
-servicios.push(servicioPeluqueria)
+servicios.push(servicioPeluqueria);
 
 const servicioAtencionMedica = {
     id: 3,
     servicio: "Atencion medica",
-    precio: 300
+    precio: 300,
 }
-servicios.push(servicioAtencionMedica)
+servicios.push(servicioAtencionMedica);
 
 const servicioJuguetes = {
     id: 4,
     servicio: "Kit de juguetes",
-    precio: 1000
+    precio: 1000,
 }
-servicios.push(servicioJuguetes)
+servicios.push(servicioJuguetes);
 
-const botonCarrito = document.getElementById("botonCarrito");
+servicios.forEach((servicioBaño) => {
+    const botonCarrito1 = document.getElementById("botonCarrito1");
+    botonCarrito1.innerText = `Comprar ${servicioBaño.servicio} a $${servicioBaño.precio}`;
+    botonCarrito1.setAttribute("id", `${servicioBaño.id}`);
+    cardCarrito1.append(botonCarrito1);
+})
 
-botonCarrito.onclick = () => {
-console.log(selectTag.selectedIndex);
-}
+servicios.forEach((servicioPeluqueria) => {
+    const botonCarrito2 = document.getElementById("botonCarrito2");
+    botonCarrito2.innerText = `Comprar ${servicioPeluqueria.servicio} a $${servicioPeluqueria.precio}`;
+    botonCarrito2.setAttribute("id", `${servicioPeluqueria.id}`);
+    cardCarrito2.append(botonCarrito2);
+})
+
+servicios.forEach((servicioAtencionMedica) => {
+    const botonCarrito3 = document.getElementById("botonCarrito3");
+    botonCarrito3.innerText = `Comprar ${servicioAtencionMedica.servicio} a $${servicioAtencionMedica.precio}`;
+    botonCarrito3.setAttribute("id", `${servicioAtencionMedica.id}`);
+    cardCarrito3.append(botonCarrito3);
+})
 
 
 
