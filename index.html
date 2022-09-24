@@ -42,44 +42,65 @@
             <h2 class="col-4">Bienvenidos a nuestra página web!</h2>
         </section>
         <section class="d-flex justify-content-around row">
-            <article id="cardCarrito1" class="card" style="width: 18rem;">
+            <article id="card1" class="card" style="width: 18rem;">
                 <img src="../img/bañito.jpeg" class="card-img-top" alt="Animalito bañandose">
                 <div class="card-body">
                     <h5 class="card-title">Servicio de limpieza</h5>
                     <p class="card-text">Comprando este servicio bañamos, secamos y perfumamos a tu peludito para que
                         huela muy bien!</p>
-                    <a href="#" class="btn btn-primary servicioSeleccionado" id="botonCarrito1"></a>
+                    <a href="#"  id="botonCard1" class="btn btn-primary servicioSeleccionado botonCompra"></a>
                 </div>
             </article>
-            <article id="cardCarrito2" class="card" style="width: 18rem;">
+            <article id="card2" class="card" style="width: 18rem;">
                 <img src="../img/peluqueria.jpg" class="card-img-top"
                     alt="perrito siendo peluqueado para quedar fachero">
-                <div class="card-body">
+                <div class="card-body card">
                     <h5 class="card-title">Un corte nuevo de pelo para tu peludito</h5>
-                    <p class="card-text">Aveces sarle un nuevo aire a tu perrito puede darle una nueva energía.</p>
-                    <a href="#" class="btn btn-primary servicioSeleccionado" id="botonCarrito2"></a>
+                    <p class="card-text">Aveces darle un nuevo aire a tu perrito puede darle una nueva energía.</p>
+                    <a href="#" id="botonCard2" class="btn btn-primary servicioSeleccionado botonCompra"></a>
                 </div>
             </article>
-            <article id="cardCarrito3" class="card" style="width: 18rem;">
+            <article id="card3" class="card" style="width: 18rem;">
                 <img src="./img/gatitoatencionmedica.jpg" class="card-img-top" alt="Gatito siendo atendido por veterinaria">
                 <div class="card-body">
                     <h5 class="card-title">Atencion médica</h5>
                     <p class="card-text">Atencion para revisar si tu peludito esté sano.</p>
-                    <a href="#" class="btn btn-primary servicioSeleccionado" id="botonCarrito3"></a>
+                    <a href="#" id="botonCard3" class="btn btn-primary servicioSeleccionado botonCompra"></a>
                 </div>
             </article>
             <article class="card" style="width: 18rem;">
                 <img src="./img/accesorios.jpg" class="card-img-top" alt="Accesorios de animalitos">
                 <div class="card-body">
                     <h5 class="card-title">Accesorios y Juguetes</h5>
-                    <a href="./pages/seccionJuguetes.html" class="btn btn-primary">Ven a ver que hay por aquí!</a>
+                    <a href="./pages/seccionJuguetes.html" class="btn btn-primary botonCompra">Ven a ver que hay por aquí!</a>
                 </div>
             </article>
         </section>
         <section class="boton row d-flex justify-content-center align-items-center">
-            <button class="col-1" id="botonAyuda">
-                ¿Necesitas ayuda?
+            <button class="col-1" id="botonCompraFinal">
+                Finalizar compra
             </button>
+        </section>
+        <section class="formularioPadre">
+            <fieldset>
+                <form class="formulario" action="" id="formulario">
+                    <h2 class="tituloFormulario">Danos una opinión para darte el mejor servicio!</h2>
+                    <label for="">
+                        <p>Nombre y apellido</p>
+                        <input name="nombre" type="text" id="inputName" placeholder="Pon tu nombre y apellido aquí">
+                    </label>
+                    <label for=""> 
+                        <p>Gmail</p>
+                        <input name="mail" type="text" id="inputEmail" placeholder="Pon tu Gmail">
+                        </label>
+                    <label for="">
+                        <p>Acá puedes escribirnos una sugerencia u opinión!</p>
+                        <textarea name="comentario" id="textarea" name="Comentario" cols="40" rows="5"></textarea>
+                    </label>
+                    <input class="botonesFormulario" type="submit" value="enviar">
+                    <input class="botonesFormulario" type="reset" value="borrar">
+                </form>
+            </fieldset>
         </section>
     </main>
     <script src="./js/archivo.js"></script>
