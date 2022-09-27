@@ -1,8 +1,4 @@
-/*      DOM PRUEBA PARA DESAFÍO       */
-const titulo = document.getElementById ("h1");
-h1.innerHTML = "Nuestra Veterinaria";
 /*           objetos para compra de carrito con usuario             */
-
 
 const cardServicio1 = document.getElementById("card1");
 
@@ -70,6 +66,7 @@ botonCompraFinal.onclick = () => {
     })
     alert (`El costo total a pagar es de $${totalServiciosAdquiridos}!`)
 }
+
 
 
 

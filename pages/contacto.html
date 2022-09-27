@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="../img/icon.png">
+    <title>Nuestra Vet</title>
+</head>
+
+<body>
+    <header class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+            <h1>
+                <a class="navbar-brand h1Header" id="h1" href="#">Nuestra Vet</a>
+            </h1>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <nav class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./pages/seccionJuguetes.html">Seccion accesorios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./pages/clientes.html">Nuestros clientes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contactanos!</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="formularioPadre">
+        <fieldset>
+            <form class="formulario" action="" id="formulario">
+                <h2 class="tituloFormulario">Danos una opinión para darte el mejor servicio!</h2>
+                <label for="">
+                    <p>Nombre y apellido</p>
+                    <input name="nombre" type="text" id="inputName" placeholder="Pon tu nombre y apellido aquí">
+                </label>
+                <label for=""> 
+                    <p>Gmail</p>
+                    <input name="mail" type="text" id="inputEmail" placeholder="Pon tu Gmail">
+                    </label>
+                <label for="">
+                    <p>Acá puedes escribirnos una sugerencia u opinión!</p>
+                    <textarea name="comentario" id="textarea" name="Comentario" cols="40" rows="5"></textarea>
+                </label>
+                <input class="botonesFormulario" id="botonSubmit" type="submit" value="enviar">
+                <input class="botonesFormulario" type="reset" value="borrar">
+            </form>
+        </fieldset>
+    </section>
+    <script src="../js/formulario.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

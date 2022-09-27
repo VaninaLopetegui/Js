@@ -1,6 +1,36 @@
+/*            header             */
+
 .h1Header {
     font-size: 1em;
+    color: #8666D9;
+    font-family: 'Noto Sans Mono', monospace;
 }
+.h1Header:hover {
+    transition: all 0.5s;
+    color: #FF8ADC;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #botonAyuda {
     width: 10%;
     height: 30%;
@@ -10,9 +40,27 @@
     height: 200px;
 }
 .tituloIndex {
-    height: 150px;
+    height: 200px;
     color: rgb(24, 124, 124);
 }
+.tituloIndex h2 {
+    font-size: 1.8rem;
+    color: #8666D9;
+    font-family: 'Noto Sans Mono', monospace;
+}
+.parrafoCards {
+    font-family: 'Noto Sans Mono', monospace;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.788);
+} 
+.card h5{
+    text-align: center;
+    font-family: 'Noto Sans Mono', monospace;
+}
+.card a{
+    
+}
+/*           formulario index          */
 .formulario {
     width: 550px;
     height: 420px;
